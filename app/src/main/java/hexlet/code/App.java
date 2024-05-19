@@ -1,6 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+import hexlet.code.games.Gcd;
+import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 import java.util.Scanner;
 
 public class App {
@@ -15,16 +19,17 @@ public class App {
                         + "6 - Prime\n"
                         + "0 - Exit\n"
                         + "Your choice: ");
-        int usersChoice = sc.nextInt();
+        String usersChoice = sc.next();
 
         switch (usersChoice) {
-            case 1 -> Cli.greetings();
-            case 2 -> Even.evenGame();
-            case 3 -> Calc.calcGame();
-            case 4 -> Gcd.gcdGame();
-            case 5 -> Progression.progressionGame();
-            case 6 -> Prime.primeGame();
-            case 0 -> System.out.println("Exit!");
+            case "1" -> Cli.greetings();
+            case "2" -> Even.evenGame();
+            case "3" -> Calc.calcGame();
+            case "4" -> Gcd.gcdGame();
+            case "5" -> Progression.progressionGame();
+            case "6" -> Prime.primeGame();
+            case "0" -> System.out.println("Exit!");
+            default -> System.out.println("Not a valid game number, try again.");
         }
     }
 }
