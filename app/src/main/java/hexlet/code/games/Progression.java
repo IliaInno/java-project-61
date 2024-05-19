@@ -4,22 +4,26 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Progression {
-    public static String question = "What number is missing in the progression?";
+    private static final int MAX_START_NUMBER = 50;
+    private static final int MIN_PROGR_LENGTH = 5;
+    private static final int MAX_PROGR_LENGTH = 12;
+    private static final int MAX_PROGR_STEP = 999;
+    public static final String QUESTION = "What number is missing in the progression?";
 
     public static void progressionGame() {
-        String[][] data = new String[Engine.roundsCount][2];
+        String[][] data = new String[Engine.ROUNDS_COUNT][2];
 
-        for (int i = 0; i < Engine.roundsCount; i++) {
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             data[i] = getRound();
         }
 
-        Engine.startGame(question, data);
+        Engine.startGame(QUESTION, data);
     }
 
     public static String[] getRound() {
-        var startNumber = Utils.getRandom(1, 25);
-        var progressionLength = Utils.getRandom(5, 12);
-        var step = Utils.getRandom(2, 18);
+        var startNumber = Utils.getRandom(1, MAX_START_NUMBER);
+        var progressionLength = Utils.getRandom(MIN_PROGR_LENGTH, MAX_PROGR_LENGTH);
+        var step = Utils.getRandom(1, MAX_PROGR_STEP);
         int indexToHide = Utils.getRandom(2, progressionLength - 1);
 
         int[] progression = getProgression(startNumber, progressionLength, step);

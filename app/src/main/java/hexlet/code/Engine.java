@@ -1,7 +1,9 @@
 package hexlet.code;
+
 import java.util.Scanner;
 public final class Engine {
-    public static int roundsCount = 3;
+
+    public static final int ROUNDS_COUNT = 3;
 
     public static void startGame(String question, String[][] data) {
         Scanner scanner = new Scanner(System.in);
@@ -9,7 +11,7 @@ public final class Engine {
         System.out.println(question);
 
 
-        for (int i = 0; i < roundsCount; i++) {
+        for (int i = 0; i < ROUNDS_COUNT; i++) {
             System.out.println(data[i][0]);
             System.out.print("Your answer: ");
             String answer = scanner.next();
@@ -25,5 +27,4 @@ public final class Engine {
 
         System.out.println("Congratulations, " + Cli.getName() + "!");
     }
-
 }

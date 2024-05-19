@@ -3,23 +3,24 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Calc {
-    public static String question = "What is the result of the expression?";
-    public static String[] operator = {"+", "-", "*"};
+    public static final String QUESTION = "What is the result of the expression?";
+    public static final String[] OPERATOR = {"+", "-", "*"};
+    private static final int MAX_NUMBER = 99;
 
     public static void calcGame() {
-        String[][] data = new String[Engine.roundsCount][2];
+        String[][] data = new String[Engine.ROUNDS_COUNT][2];
 
-        for (int i = 0; i < Engine.roundsCount; i++) {
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             data[i] = getRound();
         }
 
-        Engine.startGame(question, data);
+        Engine.startGame(QUESTION, data);
     }
 
     public static String[] getRound() {
-        int number1 = Utils.getRandom(1, 100);
-        int number2 = Utils.getRandom(1, 100);
-        String operator = Calc.operator[Utils.getRandom(0, Calc.operator.length)];
+        int number1 = Utils.getRandom(1, MAX_NUMBER);
+        int number2 = Utils.getRandom(1, MAX_NUMBER);
+        String operator = Calc.OPERATOR[Utils.getRandom(0, Calc.OPERATOR.length)];
 
         String[] questionAnswerPair = new String[2];
         questionAnswerPair[0] = "Question: " + number1 + " " + operator + " " + number2;

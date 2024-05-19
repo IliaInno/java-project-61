@@ -4,21 +4,22 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Prime {
+    private static final int MAX_NUMBER = 999;
 
-    public static String question = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    public static final String QUESTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     public static void primeGame() {
-        String[][] data = new String[Engine.roundsCount][2];
+        String[][] data = new String[Engine.ROUNDS_COUNT][2];
 
-        for (int i = 0; i < Engine.roundsCount; i++) {
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             data[i] = getRound();
         }
 
-        Engine.startGame(question, data);
+        Engine.startGame(QUESTION, data);
     }
 
     public static String[] getRound() {
-        int number = Utils.getRandom(1, 100);
+        int number = Utils.getRandom(1, MAX_NUMBER);
 
         String[] questionAnswerPair = new String[2];
         questionAnswerPair[0] = "Question: " + number;
