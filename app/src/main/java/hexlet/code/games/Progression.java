@@ -7,7 +7,7 @@ public class Progression {
     private static final int MAX_START_NUMBER = 50;
     private static final int MIN_PROGR_LENGTH = 5;
     private static final int MAX_PROGR_LENGTH = 12;
-    private static final int MAX_PROGR_STEP = 999;
+    private static final int MAX_PROGR_STEP = 99;
     public static final String QUESTION = "What number is missing in the progression?";
 
     public static void progressionGame() {
