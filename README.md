@@ -4,7 +4,7 @@
 [![Actions Status](https://github.com/IliaInno/java-project-61/workflows/hexlet-check/badge.svg)](https://github.com/IliaInno/java-project-61/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/b941d93cd6e0116f9d4e/maintainability)](https://codeclimate.com/github/IliaInno/java-project-61/maintainability)
 
-### Examples of usage (in asciinema format):
+### Examples:
 #### "Is Even Game"
 <img width="396" alt="2.even" src="https://github.com/IliaInno/java-project-61/assets/131874122/b7415331-e9f1-497f-8833-0a78bf1a6fd3">
 <img width="396" alt="2.even_wrong" src="https://github.com/IliaInno/java-project-61/assets/131874122/7f0e2dc8-cb7c-4f93-87a8-284c4de65b57">
