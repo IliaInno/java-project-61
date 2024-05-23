@@ -20,7 +20,7 @@ public class Progression {
         Engine.startGame(QUESTION, data);
     }
 
-    public static String[] getRound() {
+    private static String[] getRound() {
         var startNumber = Utils.getRandom(1, MAX_START_NUMBER);
         var progressionLength = Utils.getRandom(MIN_PROGR_LENGTH, MAX_PROGR_LENGTH);
         var step = Utils.getRandom(1, MAX_PROGR_STEP);

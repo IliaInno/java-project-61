@@ -18,7 +18,7 @@ public class Prime {
         Engine.startGame(QUESTION, data);
     }
 
-    public static String[] getRound() {
+    private static String[] getRound() {
         int number = Utils.getRandom(1, MAX_NUMBER);
 
         String[] questionAnswerPair = new String[2];
