@@ -4,7 +4,21 @@
 [![Actions Status](https://github.com/IliaInno/java-project-61/workflows/hexlet-check/badge.svg)](https://github.com/IliaInno/java-project-61/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/b941d93cd6e0116f9d4e/maintainability)](https://codeclimate.com/github/IliaInno/java-project-61/maintainability)
 
-### Examples:
+### Описание
+«Игры разума» — набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. 
+
+**Игры:**
+* Калькулятор. Арифметические выражения, которые необходимо вычислить.
+* Прогрессия. Поиск пропущенных чисел в последовательности чисел.
+* Определение четного числа.
+* Определение наибольшего общего делителя.
+* Определение простого числа.
+
+### Как запустить:
+* git clone https://github.com/IliaInno/java-project-61.git
+* make run-dist
+
+### Примеры:
 #### "Is Even Game"
 <img width="396" alt="2.even" src="https://github.com/IliaInno/java-project-61/assets/131874122/b7415331-e9f1-497f-8833-0a78bf1a6fd3">
 <img width="396" alt="2.even_wrong" src="https://github.com/IliaInno/java-project-61/assets/131874122/7f0e2dc8-cb7c-4f93-87a8-284c4de65b57">
