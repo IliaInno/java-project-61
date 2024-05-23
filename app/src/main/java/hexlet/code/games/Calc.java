@@ -7,7 +7,7 @@ public class Calc {
     public static final String[] OPERATOR = {"+", "-", "*"};
     private static final int MAX_NUMBER = 99;
 
-    public static void calcGame() {
+    public static void startGame() {
         String[][] data = new String[Engine.ROUNDS_COUNT][2];
 
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
@@ -17,7 +17,7 @@ public class Calc {
         Engine.startGame(QUESTION, data);
     }
 
-    public static String[] getRound() {
+    private static String[] getRound() {
         int number1 = Utils.getRandom(1, MAX_NUMBER);
         int number2 = Utils.getRandom(1, MAX_NUMBER);
         String operator = Calc.OPERATOR[Utils.getRandom(0, Calc.OPERATOR.length)];
@@ -30,7 +30,7 @@ public class Calc {
         return questionAnswerPair;
     }
 
-    public static int calculate(String operator, int number1, int number2) {
+    private static int calculate(String operator, int number1, int number2) {
         return switch (operator) {
             case "+" -> number1 + number2;
             case "-" -> number1 - number2;

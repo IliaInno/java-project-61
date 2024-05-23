@@ -10,7 +10,7 @@ public class Progression {
     private static final int MAX_PROGR_STEP = 99;
     public static final String QUESTION = "What number is missing in the progression?";
 
-    public static void progressionGame() {
+    public static void startGame() {
         String[][] data = new String[Engine.ROUNDS_COUNT][2];
 
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
@@ -44,7 +44,7 @@ public class Progression {
         return questionAnswerPair;
     }
 
-    public static int[] getProgression(int startNumber, int progressionLength, int step) {
+    private static int[] getProgression(int startNumber, int progressionLength, int step) {
         int[] progression = new int[progressionLength];
         for (int i = 0; i < progressionLength; i++) {
             progression[i] = startNumber + (i * step);

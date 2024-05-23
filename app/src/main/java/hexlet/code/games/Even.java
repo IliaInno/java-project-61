@@ -8,7 +8,7 @@ public class Even {
 
     public static final String QUESTION = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
-    public static void evenGame() {
+    public static void startGame() {
         String[][] data = new String[Engine.ROUNDS_COUNT][2];
 
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
@@ -18,7 +18,7 @@ public class Even {
         Engine.startGame(QUESTION, data);
     }
 
-    public static String[] getRound() {
+    private static String[] getRound() {
         int number = Utils.getRandom(1, MAX_NUMBER);
 
         String[] questionAnswerPair = new String[2];
@@ -28,7 +28,7 @@ public class Even {
         return questionAnswerPair;
     }
 
-    public static boolean isEven(int n) {
+    private static boolean isEven(int n) {
         return n % 2 == 0;
     }
 }

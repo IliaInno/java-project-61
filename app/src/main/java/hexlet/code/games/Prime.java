@@ -8,7 +8,7 @@ public class Prime {
 
     public static final String QUESTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-    public static void primeGame() {
+    public static void startGame() {
         String[][] data = new String[Engine.ROUNDS_COUNT][2];
 
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
@@ -28,7 +28,7 @@ public class Prime {
         return questionAnswerPair;
     }
 
-    public static boolean isPrime(int n) {
+    private static boolean isPrime(int n) {
         if (n < 2) {
             return false;
         }

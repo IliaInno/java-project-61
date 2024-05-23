@@ -10,24 +10,26 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Please enter the game number and press Enter.\n"
-                        + "1 - Greet\n"
-                        + "2 - Even\n"
-                        + "3 - Calc\n"
-                        + "4 - GCD\n"
-                        + "5 - Progression\n"
-                        + "6 - Prime\n"
-                        + "0 - Exit\n"
-                        + "Your choice: ");
+        System.out.println("""
+             Please enter the game number and press Enter.
+             1 - Greet
+             2 - Even
+             3 - Calc
+             4 - GCD
+             5 - Progression
+             6 - Prime
+             0 - Exit
+             """);
+        System.out.print("Your choice: ");
         String usersChoice = sc.next();
 
         switch (usersChoice) {
             case "1" -> Cli.greetings();
-            case "2" -> Even.evenGame();
-            case "3" -> Calc.calcGame();
-            case "4" -> Gcd.gcdGame();
-            case "5" -> Progression.progressionGame();
-            case "6" -> Prime.primeGame();
+            case "2" -> Even.startGame();
+            case "3" -> Calc.startGame();
+            case "4" -> Gcd.startGame();
+            case "5" -> Progression.startGame();
+            case "6" -> Prime.startGame();
             case "0" -> System.out.println("Exit!");
             default -> System.out.println("Not a valid game number, try again.");
         }
